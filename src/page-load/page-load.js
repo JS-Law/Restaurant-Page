@@ -1,5 +1,5 @@
 
-import NoodleImage from './background-image.jpg'
+import bgImage from './background-image.jpg';
 
 class PageInitializer {
     constructor() {
@@ -27,12 +27,20 @@ class PageInitializer {
         }
     }
 
+    imageImporter(newImage){
+        let image = this.createElement('img', {src: newImage});
+        return image;
+    }
+
+
     onPageLoad() {
         const header = document.querySelector('#header');
         const content = document.querySelector('#content');
         const title = this.createElement('h1', { class: 'header' }, "Samantha's Noodle Basement");
+        // const noodleImage = this.imageImporter(bgImage)
         const noodleImage = new Image();
-        noodleImage.src = NoodleImage;
+        noodleImage.src = bgImage;
+
         this.appendElements(content, noodleImage)
         this.appendElements(header, title );
     }

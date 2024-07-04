@@ -9,3 +9,10 @@
 #content{
     color: red;
 }
+
+#content{
+    background-image: url(../src/page-load/background-image.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
