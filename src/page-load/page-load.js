@@ -25,7 +25,7 @@ class PageInitializer {
     }
 
     onPageLoad() {
-        const body = document.querySelector('body');
+        const content = document.querySelector('#content');
         
         // Creating elements
         const header = this.createElement('h1', { class: 'header' }, 'Hello, World!');
