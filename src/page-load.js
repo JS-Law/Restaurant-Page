@@ -29,9 +29,11 @@ class PageInitializer {
 
     onPageLoad() {
         const header = document.querySelector('#header');
+        const content = document.querySelector('#content');
         const title = this.createElement('h1', { class: 'header' }, "Samantha's Noodle Basement");
-        // const paragraph = this.createElement('p', { class: 'description' }, 'This is a sample paragraph.');
-        // const 
+        const noodleImage = new Image();
+        noodleImage.src = NoodleImage;
+        this.appendElements(content, noodleImage)
         this.appendElements(header, title );
     }
 }
