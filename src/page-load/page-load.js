@@ -32,7 +32,7 @@ class PageInitializer {
         const paragraph = this.createElement('p', { class: 'description' }, 'This is a sample paragraph.');
 
         // Appending elements
-        this.appendElements(body, header, paragraph);
+        this.appendElements(content, header, paragraph);
     }
 }
 
