@@ -1,3 +1,6 @@
+
+import NoodleImage from './background-image.jpg'
+
 class PageInitializer {
     constructor() {
         document.addEventListener('DOMContentLoaded', this.onPageLoad.bind(this));
@@ -25,14 +28,11 @@ class PageInitializer {
     }
 
     onPageLoad() {
-        const content = document.querySelector('#content');
-        
-        // Creating elements
-        const header = this.createElement('h1', { class: 'header' }, 'Hello, World!');
-        const paragraph = this.createElement('p', { class: 'description' }, 'This is a sample paragraph.');
-
-        // Appending elements
-        this.appendElements(content, header, paragraph);
+        const header = document.querySelector('#header');
+        const title = this.createElement('h1', { class: 'header' }, "Samantha's Noodle Basement");
+        // const paragraph = this.createElement('p', { class: 'description' }, 'This is a sample paragraph.');
+        // const 
+        this.appendElements(header, title );
     }
 }
 
