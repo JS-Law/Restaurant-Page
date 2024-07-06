@@ -8,6 +8,11 @@
 }
 
 
+html{
+    box-sizing: border-box;
+    margin: 0px;
+
+}
 
 
 #header{
@@ -16,20 +21,14 @@
     align-items: center;
     gap: .5rem;
     font-family: 'Cormorant';
+    font-size: 3rem;
 }
 #titlePreface{
     font-family: 'Inter';
+    font-size: 1.25rem;
 }
 
 
 #content{
     color: red;
-}
-
-html{
-    background-image: url(./page-load/background-image.jpg);
-    background-position: center;
-    background-size: cover;
-
-
 }
