@@ -19,7 +19,7 @@ class PageInitializer {
             }
         }
         return element;
-    }
+    }   
 
     appendElements(parent, ...elements) {
         for (let element of elements) {
@@ -36,13 +36,14 @@ class PageInitializer {
     onPageLoad() {
         const header = document.querySelector('#header');
         const content = document.querySelector('#content');
-        const title = this.createElement('h1', { class: 'header' }, "Samantha's Noodle Basement");
+        const titlePreface = this.createElement('p', {id: 'titlePreface'}, 'The');
+        const title = this.createElement('h1', { class: 'header' }, "Noodle Basement");
         // const noodleImage = this.imageImporter(bgImage)
         const noodleImage = new Image();
         noodleImage.src = bgImage;
 
-        this.appendElements(content, noodleImage)
-        this.appendElements(header, title );
+        // this.appendElements(content, noodleImage)
+        this.appendElements(header, titlePreface, title );
     }
 }
 
