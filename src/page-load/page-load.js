@@ -28,7 +28,7 @@ class PageInitializer {
     }
 
     imageImporter(newImage){
-        let image = this.createElement('img', {src: newImage});
+        let image = this.createElement('img', {src: newImage, id: ``});
         return image;
     }
 
@@ -38,13 +38,18 @@ class PageInitializer {
         const content = document.querySelector('#content');
         const titlePreface = this.createElement('p', {id: 'titlePreface'}, 'The');
         const title = this.createElement('h1', { class: 'header' }, "Noodle Basement");
-        // const noodleImage = this.imageImporter(bgImage)
-        const noodleImage = new Image();
-        noodleImage.src = bgImage;
+        const noodleImage = this.imageImporter(bgImage)
+        
+        const navBar = document.querySelector('#nav-bar')
 
-        // this.appendElements(content, noodleImage)
+        const homeBtn = this.createElement('button', {class: 'nav-button'}, "HOME")
+        const contactBtn = this.createElement('button', {class: 'nav-button'}, "MENU")
+        const menuBtn = this.createElement('button', {class: 'nav-button'}, "CONTACT US")
+
+        this.appendElements(content, noodleImage);
         this.appendElements(header, titlePreface, title );
-    }
+        this.appendElements(navBar, homeBtn, contactBtn, menuBtn)
+    }   
 }
 
 // Initialize the PageInitializer class

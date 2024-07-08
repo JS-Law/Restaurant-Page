@@ -8,7 +8,7 @@
 }
 
 
-html{
+body{
     box-sizing: border-box;
     margin: 0px;
 
@@ -23,12 +23,21 @@ html{
     font-family: 'Cormorant';
     font-size: 3rem;
 }
+#header h1{
+    margin-block: 0;
+}
 #titlePreface{
     font-family: 'Inter';
     font-size: 1.25rem;
 }
 
-
 #content{
-    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#content img{
+        width: 50vw;
+        border-radius: .7rem;
 }
