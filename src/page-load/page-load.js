@@ -38,17 +38,31 @@ class PageInitializer {
         const content = document.querySelector('#content');
         const titlePreface = this.createElement('p', {id: 'titlePreface'}, 'The');
         const title = this.createElement('h1', { class: 'header' }, "Noodle Basement");
-        const noodleImage = this.imageImporter(bgImage)
         
-        const navBar = document.querySelector('#nav-bar')
+        const navBar = document.querySelector('#nav-bar');
+        const homeBtn = this.createElement('button', {class: 'nav-button'}, "HOME");
+        const contactBtn = this.createElement('button', {class: 'nav-button'}, "MENU");
+        const menuBtn = this.createElement('button', {class: 'nav-button'}, "CONTACT US");
+        
+        const divider = this.createElement('hr', {id:'divider'})
+        
+        const tempDiv = this.createElement('div', {id: 'temp-div'});
+        const noodleImage = this.imageImporter(bgImage)
+        const aboutUsContainer = this.createElement('div', { id : 'about-us-container'})
+        const aboutUsTitle = this.createElement('h2', {id: 'about-us-title'}, 'About Us...');
+        const aboutUs = this.createElement(
+            'p',
+            { id : 'about-us' },
+            "Welcome to The Noodle Basement, a cozy, subterranean restaurant founded by Samantha, a passionate food lover. We specialize in hand-made noodles, blending traditional Asian recipes with modern twists to create unforgettable dishes. At The Noodle Basement, we pride ourselves on using the finest ingredients and delivering exceptional service in a warm, welcoming atmosphere. Whether you're a noodle enthusiast or a first-time visitor, you'll find something to love in our diverse menu. Join us for a unique dining experience that combines tradition, creativity, and hospitality. We look forward to sharing our love for noodles with you!"
+        )
 
-        const homeBtn = this.createElement('button', {class: 'nav-button'}, "HOME")
-        const contactBtn = this.createElement('button', {class: 'nav-button'}, "MENU")
-        const menuBtn = this.createElement('button', {class: 'nav-button'}, "CONTACT US")
-
-        this.appendElements(content, noodleImage);
         this.appendElements(header, titlePreface, title );
         this.appendElements(navBar, homeBtn, contactBtn, menuBtn)
+        
+        this.appendElements(content, tempDiv);
+        this.appendElements(tempDiv, noodleImage, aboutUsContainer)
+        this.appendElements(aboutUsContainer, aboutUsTitle, aboutUs)
+        
     }   
 }
 

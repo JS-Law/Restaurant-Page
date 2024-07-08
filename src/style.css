@@ -34,7 +34,9 @@ body{
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-block-end: 1rem;
+    padding-block-end: 1rem;
+    margin-inline: 2rem;
+    border-bottom: solid black 2px;
 }
 
 button {
@@ -79,12 +81,36 @@ button {
   }
 
 #content{
+    margin-inline: 12rem;
+    margin-bottom: 12rem;
+}
+#temp-div{
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    margin-block-start: 6rem;
 }
+
+#about-us-container{
+    width: 40vw;
+    border-radius: .7rem;
+    padding-inline: 5rem;
+    -webkit-box-shadow: 28px 35px 44px -23px rgba(0,0,0,0.75);
+    -moz-box-shadow: 28px 35px 44px -23px rgba(0,0,0,0.75);
+    box-shadow: 28px 35px 44px -23px rgba(0,0,0,0.75);
+}
+
+#about-us{
+    font-family: 'Inter';
+    line-height: 1.3rem;
+    letter-spacing: .05rem;
+}
+
+#about-us-title{
+    font-family: 'Cormorant';
+    font-size: 2rem;
+}
+
 #content img{
-        width: 50vw;
+        width: 39vw;
         border-radius: .7rem;
 }
