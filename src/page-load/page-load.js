@@ -44,7 +44,6 @@ class PageInitializer {
         const contactBtn = this.createElement('button', {class: 'nav-button', id : 'contact-button'}, "MENU");
         const menuBtn = this.createElement('button', {class: 'nav-button', id : 'menu-button'}, "CONTACT US");
         
-        const divider = this.createElement('hr', {id:'divider'})
         
         const tempDiv = this.createElement('div', {id: 'temp-div'});
         const noodleImage = this.imageImporter(bgImage)
