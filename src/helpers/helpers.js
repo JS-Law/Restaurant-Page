@@ -1,10 +1,12 @@
 // -----------------ELEMENT CREATOR-----------------
 class ElementCreator {
+    
     /**
     * @param {string} type - The type of the HTML element to create.
     * @param {Object} attributes - The attributes to set on the element.
     * @param {...(string|Node)} children - The children to append to the element.
     */
+
     constructor(type, attributes = {}, ...children) {
         if (typeof type !== 'string' || !type) {
             throw new Error('Invalid element type.');
@@ -18,6 +20,7 @@ class ElementCreator {
     * Creates and returns the HTML element.
     * @returns {HTMLElement} The created HTML element.
     */
+    
     createElement() {
         const element = document.createElement(this.type);
         for (let key in this.attributes) {
@@ -44,10 +47,12 @@ class ElementCreator {
 
 // -----------------ELEMENT APPENDER-----------------
 class ElementAppender {
+    
     /**
     * @param {Node} parent - The parent element to append to.
     * @param {...Node} elements - The elements to append.
     */
+    
     constructor(parent, ...elements) {
         if (!(parent instanceof Node)) {
             throw new Error('Parent must be a valid DOM node.');
@@ -59,6 +64,7 @@ class ElementAppender {
     /**
     * Appends the elements to the parent element.
     */
+    
     appendElements() {
         for (let element of this.elements) {
             if (element instanceof Node) {
@@ -76,10 +82,12 @@ class ElementAppender {
 
 // -----------------IMAGE IMPORTER-----------------
 class ImageImporter {
+    
     /**
     * @param {string} newImage - The source URL of the new image.
     * @param {string} selector - The id for the new image element.
     */
+    
     constructor(newImage, selector) {
         if (typeof newImage !== 'string' || !newImage) {
             throw new Error('Invalid image source.');
@@ -95,6 +103,7 @@ class ImageImporter {
     * Creates and returns an image element.
     * @returns {HTMLImageElement} The created image element.
     */
+    
     importImage() {
         const imageCreator = new ElementCreator('img', { src: this.newImage, id: this.selector });
         return imageCreator.createElement();
