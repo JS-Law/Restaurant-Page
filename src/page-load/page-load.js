@@ -40,9 +40,9 @@ class PageInitializer {
         const title = this.createElement('h1', { class: 'header' }, "Noodle Basement");
         
         const navBar = document.querySelector('#nav-bar');
-        const homeBtn = this.createElement('button', {class: 'nav-button'}, "HOME");
-        const contactBtn = this.createElement('button', {class: 'nav-button'}, "MENU");
-        const menuBtn = this.createElement('button', {class: 'nav-button'}, "CONTACT US");
+        const homeBtn = this.createElement('button', {class: 'nav-button' , id : 'home-button'}, "HOME");
+        const contactBtn = this.createElement('button', {class: 'nav-button', id : 'contact-button'}, "MENU");
+        const menuBtn = this.createElement('button', {class: 'nav-button', id : 'menu-button'}, "CONTACT US");
         
         const divider = this.createElement('hr', {id:'divider'})
         
