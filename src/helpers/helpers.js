@@ -92,11 +92,7 @@ class ImageImporter {
         if (typeof newImage !== 'string' || !newImage) {
             throw new Error('Invalid image source.');
         }
-        if (typeof selector !== 'string' || !selector) {
-            throw new Error('Invalid selector.');
-        }
         this.newImage = newImage;
-        this.selector = selector;
     }
 
     /**

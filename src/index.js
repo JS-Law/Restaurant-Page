@@ -1,10 +1,12 @@
 
 // Import Statements
-import {pageInitializer} from "./page-load/page-load";
+// import {pageInitializer} from "./page-load/page-load";
+import { PageOne } from "./page-one/page-one";
 import './style.css'
 
 function callInitializer(){
-    pageInitializer
+    // pageInitializer
+    PageOne
 }
 
 document.addEventListener('DOMContentLoaded', () => {
