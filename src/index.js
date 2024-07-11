@@ -2,24 +2,32 @@
 // Import Statements
 // import {pageInitializer} from "./page-load/page-load";
 import { PageOne } from "./page-one/page-one";
+import { LoadHeader } from "./header-loader/header-loader";
 import './style.css'
 
-function callInitializer(){
-    // pageInitializer
-    PageOne
+
+const genPageOne = new PageOne()
+
+function callPageOne(){
+    genPageOne.onPageLoad();
 }
 
+function callHeader(){
+    LoadHeader
+}
+
+
 document.addEventListener('DOMContentLoaded', () => {
-    callInitializer();
+    callHeader()
     
     const homeBtn = document.querySelector('#home-button');
     const menuBtn = document.querySelector('#menu-button');
     const contactBtn = document.querySelector('#contact-button');
-
+    
     if (homeBtn) {
         homeBtn.addEventListener('click', () => {
             alert("Loading Home Page");
-            callInitializer();
+            callPageOne();
         });
     };
     if (menuBtn) {
