@@ -6,7 +6,6 @@ import bgImage from './background-image.jpg';
 class PageOne {
     constructor() {
         this.initialized = false;
-        document.addEventListener('DOMContentLoaded', this.onPageLoad.bind(this));
     }
 
     onPageLoad() {
@@ -20,7 +19,6 @@ class PageOne {
         const content = document.querySelector('#content');
         const navBar = document.querySelector('#nav-bar');
 
-        // Check if the elements already exist to prevent duplication
         if (!document.querySelector('#titlePreface')) {
             const titlePreface = new ElementCreator('p', { id: 'titlePreface' }, 'The').createElement();
             const title = new ElementCreator('h1', { class: 'header' }, "Noodle Basement").createElement();
@@ -36,7 +34,7 @@ class PageOne {
 
         if (!document.querySelector('#temp-div')) {
             const tempDiv = new ElementCreator('div', { id: 'temp-div' }).createElement();
-            const noodleImage = new ImageImporter(bgImage).importImage();
+            const noodleImage = new ImageImporter(bgImage, 'noodle-image').importImage();
             const aboutUsContainer = new ElementCreator('div', { id: 'about-us-container' }).createElement();
             const aboutUsTitle = new ElementCreator('h2', { id: 'about-us-title' }, 'About Us...').createElement();
             const aboutUs = new ElementCreator(
@@ -52,9 +50,4 @@ class PageOne {
     }
 }
 
-// Initialize the PageOne class
-const generatePageOne = new PageOne();
-
-export {
-    PageOne
-};
+export { PageOne };
