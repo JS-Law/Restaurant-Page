@@ -29,8 +29,8 @@ class LoadHeader {
 
         if (!document.querySelector('#home-button')) {
             const homeBtn = new ElementCreator('button', { class: 'nav-button', id: 'home-button' }, "HOME").createElement();
-            const contactBtn = new ElementCreator('button', { class: 'nav-button', id: 'contact-button' }, "MENU").createElement();
-            const menuBtn = new ElementCreator('button', { class: 'nav-button', id: 'menu-button' }, "CONTACT US").createElement();
+            const contactBtn = new ElementCreator('button', { class: 'nav-button', id: 'contact-button' }, "CONTACT US").createElement();
+            const menuBtn = new ElementCreator('button', { class: 'nav-button', id: 'menu-button' }, "MENU").createElement();
             new ElementAppender(navBar, homeBtn, contactBtn, menuBtn).appendElements();
         }
 

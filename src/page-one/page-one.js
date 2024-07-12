@@ -8,6 +8,10 @@ class PageOne {
         this.initialized = false;
     }
 
+    onPageUnload(){
+        this.initialized = false;
+    }
+    
     onPageLoad() {
         if (this.initialized) {
             return;
@@ -27,8 +31,8 @@ class PageOne {
 
         if (!document.querySelector('#home-button')) {
             const homeBtn = new ElementCreator('button', { class: 'nav-button', id: 'home-button' }, "HOME").createElement();
-            const contactBtn = new ElementCreator('button', { class: 'nav-button', id: 'contact-button' }, "MENU").createElement();
             const menuBtn = new ElementCreator('button', { class: 'nav-button', id: 'menu-button' }, "CONTACT US").createElement();
+            const contactBtn = new ElementCreator('button', { class: 'nav-button', id: 'contact-button' }, "MENU").createElement();
             new ElementAppender(navBar, homeBtn, contactBtn, menuBtn).appendElements();
         }
 
