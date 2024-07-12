@@ -17,8 +17,8 @@ class Menu {
         this.menuItems = [];
     }
 
-    addBook(book){
-        this.menuItems.push(this.menuItem);
+    addBook(menuItem){
+        this.menuItems.push(menuItem);
     }
 }
 
