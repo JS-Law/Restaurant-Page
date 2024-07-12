@@ -18,6 +18,11 @@ function clearContainer(containerId) {
     }
 }
 
+function pageUnload(page){
+    page.onPageUnload();
+}
+
+
 function containerExists(containerId) {
     const content = document.getElementById('content');
     if (content) {
@@ -42,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (homeBtn) {
         homeBtn.addEventListener('click', () => {
+            pageUnload(generatePageOne)
             if (containerExists('temp-div')) {
                 clearContainer('content')
                 // console.log('The container exists.');
@@ -49,25 +55,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 callPage(generatePageOne);
                 // console.log('The container does not exist.');
             }
-            
-            // alert("Loading Home Page");
-            
         });
     }
     if (menuBtn) {
         menuBtn.addEventListener('click', () => {
+            pageUnload(generatePageTwo)
             if (containerExists('menu-container')) {
-                callPage(generatePageTwo);
+                clearContainer('content')
                 // console.log('The container exists.');
             } else {
-                clearContainer('content')
-                // console.log('The container does not exist.');
+                callPage(generatePageTwo);
             }
-            // alert("Loading Menu Page");
         });
     }
     if (contactBtn) {
         contactBtn.addEventListener('click', () => {
+            // pageUnload(generatePageThree)
+            if (containerExists('contact-container')) {
+                clearContainer('content')
+                // console.log('The container exists.');
+            } else {
+                // callPage(generatePageThree);
+            }
             alert("Loading Contact Page");
         });
     }
