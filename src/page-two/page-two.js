@@ -11,7 +11,15 @@ class MenuItem {
     }
 }
 
+class Menu {
+    constructor() {
+        this.menuItems = [];
+    }
 
+    addBook(book){
+        this.menuItems.push(this.menuItem);
+    }
+}
 
 class PageTwo {
     constructor() {
