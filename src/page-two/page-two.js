@@ -3,11 +3,12 @@ import { ElementCreator } from "../helpers/helpers";
 import { ImageImporter } from "../helpers/helpers";
 // import bgImage from './background-image.jpg';
 class MenuItem {
-    constructor(name, calories, noodleType, description){
+    constructor(name, calories, noodleType, description, price){
         this.name = name;
         this.calories = calories;
         this.noodleType = noodleType;
         this.description = description;
+        this.price = price;
     }
 }
 
@@ -42,19 +43,13 @@ class PageTwo {
         if (!document.querySelector('#menu-container')) {
             const menuContainer = new ElementCreator('div', { id: 'container' }).createElement();
             
-            
-
-
-
-
-            const noodleImage = new ImageImporter(bgImage, 'noodle-image').importImage();
-            const aboutUsContainer = new ElementCreator('div', { id: 'about-us-container' }).createElement();
-            const aboutUsTitle = new ElementCreator('h2', { id: 'about-us-title' }, 'About Us...').createElement();
-            const aboutUs = new ElementCreator(
-                'p',
-                { id: 'about-us' },
-                "Welcome to The Noodle Basement, a cozy, subterranean restaurant founded by Samantha, a passionate food lover. We specialize in hand-made noodles, blending traditional Asian recipes with modern twists to create unforgettable dishes. At The Noodle Basement, we pride ourselves on using the finest ingredients and delivering exceptional service in a warm, welcoming atmosphere. Whether you're a noodle enthusiast or a first-time visitor, you'll find something to love in our diverse menu. Join us for a unique dining experience that combines tradition, creativity, and hospitality. We look forward to sharing our love for noodles with you!"
-            ).createElement();
+            /** ----------BRAINSTORM FOR POSSIBLE ELEMENTS NEEDED----------
+             *  Grid container
+             *  Grid row for each container, the grid auto flow will need to be set properly
+             *  Styled like a traditional menu
+             * 
+             * 
+             */
 
             new ElementAppender(content, menuContainer).appendElements();
             new ElementAppender(menuContainer, noodleImage, aboutUsContainer).appendElements();
