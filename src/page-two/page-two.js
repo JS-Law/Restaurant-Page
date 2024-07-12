@@ -47,8 +47,17 @@ class PageTwo {
              *  Grid container
              *  Grid row for each container, the grid auto flow will need to be set properly
              *  Styled like a traditional menu
+             *  Two columns per row
+             *  Each grid cell will be a flex container
              * 
-             * 
+             *  EXAMPLE:
+             *      Spicey Wok Noodles
+             *      680cal
+             *      A wonderful description of the spicey noodles above. **Chef favorite**
+             *      $14.99
+             *  EXTRA POINTS
+             *      I'd love to be able to have the menu bento box overlayed ontop of an image
+             *      so that there is a sliver, lets say 20px shown on the top.
              */
 
             new ElementAppender(content, menuContainer).appendElements();
