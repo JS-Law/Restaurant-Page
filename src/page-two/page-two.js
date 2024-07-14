@@ -17,7 +17,7 @@ class Menu {
         this.menuItems = [];
     }
 
-    addBook(menuItem){
+    addDish(menuItem){
         this.menuItems.push(menuItem);
     }
 }
@@ -108,8 +108,22 @@ class PageTwo {
         const content = document.querySelector('#content');
 
         if (!document.querySelector('#menu-container')) {
-            const menuContainer = new ElementCreator('div', { id: 'container' }).createElement();
             
+            Menu.addDish(menuItemOne)
+            Menu.addDish(menuItemTwo)
+            Menu.addDish(menuItemThree)
+            Menu.addDish(menuItemFour)
+            Menu.addDish(menuItemFive)
+            Menu.addDish(menuItemSix)
+            Menu.addDish(menuItemSeven)
+            Menu.addDish(menuItemEight)
+
+            const menuContainer = new ElementCreator('div', { id: 'container' }).createElement();
+            menuContainer.style.display = 'grid'
+            menuContainer.style.gridTemplateColumns = 'repeat(2, 10px)'
+            menuContainer.style.gridTemplateRows = 'repeat(8, 10px)'
+
+
             /** ----------BRAINSTORM FOR POSSIBLE ELEMENTS NEEDED----------
              *  Grid container
              *  Grid row for each container, the grid auto flow will need to be set properly
