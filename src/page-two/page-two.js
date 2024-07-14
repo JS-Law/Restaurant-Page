@@ -106,22 +106,60 @@ class PageTwo {
         this.initialized = true;
 
         const content = document.querySelector('#content');
+        const menuContainer = new ElementCreator('div', { id: 'menu-container' }).createElement();
 
         if (!document.querySelector('#menu-container')) {
             
-            Menu.addDish(menuItemOne)
-            Menu.addDish(menuItemTwo)
-            Menu.addDish(menuItemThree)
-            Menu.addDish(menuItemFour)
-            Menu.addDish(menuItemFive)
-            Menu.addDish(menuItemSix)
-            Menu.addDish(menuItemSeven)
-            Menu.addDish(menuItemEight)
+            const menuList = new Menu()
+            
+            menuList.addDish(menuItemOne)
+            menuList.addDish(menuItemTwo)
+            menuList.addDish(menuItemThree)
+            menuList.addDish(menuItemFour)
+            menuList.addDish(menuItemFive)
+            menuList.addDish(menuItemSix)
+            menuList.addDish(menuItemSeven)
+            menuList.addDish(menuItemEight)
 
-            const menuContainer = new ElementCreator('div', { id: 'container' }).createElement();
-            menuContainer.style.display = 'grid'
-            menuContainer.style.gridTemplateColumns = 'repeat(2, 10px)'
-            menuContainer.style.gridTemplateRows = 'repeat(8, 10px)'
+            menuContainer.style.display = 'grid';
+            menuContainer.style.gridTemplateColumns = 'repeat(2, 1fr)';
+            menuContainer.style.gridTemplateRows = 'repeat(8, 1fr)';
+            menuList.menuItems.forEach(element => {
+                
+                let dish = document.createElement('div');
+                dish.className = 'dish';
+                dish.style.display = 'flex';
+                dish.style.flexDirection = 'column';
+                dish.style.alignItems = 'center';
+                new ElementAppender(menuContainer, dish).appendElements()
+                
+                // Add IDs to dish elements
+                // Remove margin or adjust
+                // 
+
+                let dishName = document.createElement('h4');
+                dishName.textContent = element.name;
+                new ElementAppender(dish, dishName).appendElements()
+                
+                let dishCalories = document.createElement('p');
+                dishCalories.textContent = element.calories;
+                new ElementAppender(dish, dishCalories).appendElements()
+                
+                
+                let dishNoodleType = document.createElement('div');
+                dishNoodleType.textContent = element.noodleType;
+                new ElementAppender(dish, dishNoodleType).appendElements()
+                
+                
+                let dishDescription = document.createElement('div');
+                dishDescription.textContent = element.description;
+                new ElementAppender(dish, dishDescription).appendElements()
+                
+                
+                let dishPrice = document.createElement('div');
+                dishPrice.textContent = element.price
+                new ElementAppender(dish, dishPrice).appendElements()
+            });
 
 
             /** ----------BRAINSTORM FOR POSSIBLE ELEMENTS NEEDED----------
@@ -142,8 +180,8 @@ class PageTwo {
              */
 
             new ElementAppender(content, menuContainer).appendElements();
-            new ElementAppender(menuContainer, noodleImage, aboutUsContainer).appendElements();
-            new ElementAppender(aboutUsContainer, aboutUsTitle, aboutUs).appendElements();
+            // new ElementAppender(menuContainer, , aboutUsContainer).appendElements();
+            // new ElementAppender(aboutUsContainer, aboutUsTitle, aboutUs).appendElements();
         }
     }
 }
