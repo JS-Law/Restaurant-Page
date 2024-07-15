@@ -26,12 +26,13 @@ class PageThree {
             const contactImage = new ImageImporter(contactImg, 'noodle-image').importImage();
             const contactUsContainer = new ElementCreator('div', { id: 'contact-us-container' }).createElement();
             const contactUsTitle = new ElementCreator('h2', { id: 'contact-us-title' }, 'Contact Us...').createElement();
+            contactUsTitle.style.textAlign = 'center'
             const hoursOfOperation = new ElementCreator('p', {id: 'hours-operation'}, 'Hours of Operation').createElement();
-            const monThur = new ElementCreator('p', {id : 'mon-thur'}, 'Monday - Thursday').createElement();
+            const monThur = new ElementCreator('p', {class : 'hours-title'}, 'Monday - Thursday').createElement();
             const hoursOne = new ElementCreator('p', {class : 'hours'}, '11:00 AM - 10:00 PM').createElement();
-            const friSat = new ElementCreator('p', {id : 'fri-sat'}, 'Friday - Saturday').createElement();
+            const friSat = new ElementCreator('p', {class : 'hours-title'}, 'Friday - Saturday').createElement();
             const hoursTwo = new ElementCreator('p', {class : 'hours'}, '11:00 AM - 11:00 PM').createElement();
-            const sunday = new ElementCreator('p', {id : 'sunday'}, 'Sunday').createElement();
+            const sunday = new ElementCreator('p', {class : 'hours-title'}, 'Sunday').createElement();
             const hoursThree = new ElementCreator('p', {class : 'hours'}, '12:00 PM - 9:00 PM').createElement();
             const contactUsInfoTitle = new ElementCreator('h3', { id: 'contact-us-info-title' }, 'Contact Details:').createElement();
             const email = new ElementCreator('p', { id: 'email' }, 'noodlebasement@noodlebasement.com').createElement();

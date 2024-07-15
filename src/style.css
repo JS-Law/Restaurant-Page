@@ -192,5 +192,34 @@ button:after {
     font-size: 2rem;
 }
 
+.hours{
+    font-family: 'inter';
+    font-size: 1rem;
+    margin-block-end: 1.5rem;
+    font-weight: 100;
+}
+
+#hours-operation{
+    font-family: 'Cormorant';
+    font-size: 1.8rem;
+    margin-block-end: 1.5rem;
+    font-weight: 600;
+}
+
+.hours-title{
+    font-family: 'Cormorant';
+    font-size: 1.5rem !important;
+    font-weight: 600;
+    
+}
+
+#contact-us-info-title{
+    font-family: 'Cormorant';
+    margin-block-start: 2rem;
+}
+
+#email{
+    font-family: 'inter';
+}
 
 
