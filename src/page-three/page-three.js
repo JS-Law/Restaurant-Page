@@ -26,15 +26,20 @@ class PageThree {
             const contactImage = new ImageImporter(contactImg, 'noodle-image').importImage();
             const contactUsContainer = new ElementCreator('div', { id: 'contact-us-container' }).createElement();
             const contactUsTitle = new ElementCreator('h2', { id: 'contact-us-title' }, 'Contact Us...').createElement();
-            const contactUs = new ElementCreator(
-                'p',
-                { id: 'contact-us' },
-                "Welcome to The Noodle Basement, a cozy, subterranean restaurant founded by Samantha, a passionate food lover. We specialize in hand-made noodles, blending traditional Asian recipes with modern twists to create unforgettable dishes. At The Noodle Basement, we pride ourselves on using the finest ingredients and delivering exceptional service in a warm, welcoming atmosphere. Whether you're a noodle enthusiast or a first-time visitor, you'll find something to love in our diverse menu. Join us for a unique dining experience that combines tradition, creativity, and hospitality. We look forward to sharing our love for noodles with you!"
-            ).createElement();
+            const hoursOfOperation = new ElementCreator('p', {id: 'hours-operation'}, 'Hours of Operation').createElement();
+            const monThur = new ElementCreator('p', {id : 'mon-thur'}, 'Monday - Thursday').createElement();
+            const hoursOne = new ElementCreator('p', {class : 'hours'}, '11:00 AM - 10:00 PM').createElement();
+            const friSat = new ElementCreator('p', {id : 'fri-sat'}, 'Friday - Saturday').createElement();
+            const hoursTwo = new ElementCreator('p', {class : 'hours'}, '11:00 AM - 11:00 PM').createElement();
+            const sunday = new ElementCreator('p', {id : 'sunday'}, 'Sunday').createElement();
+            const hoursThree = new ElementCreator('p', {class : 'hours'}, '12:00 PM - 9:00 PM').createElement();
+            const contactUsInfoTitle = new ElementCreator('h3', { id: 'contact-us-info-title' }, 'Contact Details:').createElement();
+            const email = new ElementCreator('p', { id: 'email' }, 'noodlebasement@noodlebasement.com').createElement();
+            
 
             new ElementAppender(content, contactContainer).appendElements();
             new ElementAppender(contactContainer, contactImage, contactUsContainer).appendElements();
-            new ElementAppender(contactUsContainer, contactUsTitle, contactUs).appendElements();
+            new ElementAppender(contactUsContainer, contactUsTitle, hoursOfOperation, monThur, hoursOne, friSat, hoursTwo, sunday, hoursThree, contactUsInfoTitle, email).appendElements();
         }
     }
 }
