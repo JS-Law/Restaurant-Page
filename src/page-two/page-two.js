@@ -139,25 +139,29 @@ class PageTwo {
 
                 let dishName = document.createElement('h4');
                 dishName.textContent = element.name;
+                dishName.className = 'dish-name';
                 new ElementAppender(dish, dishName).appendElements()
                 
                 let dishCalories = document.createElement('p');
                 dishCalories.textContent = element.calories;
+                dishCalories.className = 'dish-calories';
                 new ElementAppender(dish, dishCalories).appendElements()
-                
                 
                 let dishNoodleType = document.createElement('div');
                 dishNoodleType.textContent = element.noodleType;
+                dishNoodleType.className = 'dish-noodle-type'
                 new ElementAppender(dish, dishNoodleType).appendElements()
                 
                 
                 let dishDescription = document.createElement('div');
                 dishDescription.textContent = element.description;
+                dishDescription.className = 'dish-description'
                 new ElementAppender(dish, dishDescription).appendElements()
                 
                 
                 let dishPrice = document.createElement('div');
                 dishPrice.textContent = element.price
+                dishPrice.className = 'dish-price'
                 new ElementAppender(dish, dishPrice).appendElements()
             });
 
