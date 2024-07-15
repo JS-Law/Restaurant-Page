@@ -125,3 +125,69 @@ button:after {
 
 
 /* PAGE TWO */
+
+#menu-container{
+    margin-block-start: 6rem;
+}
+
+.dish{
+    margin-inline: 3rem;
+    margin-block: 1rem;
+    border: solid 2px black;
+    padding-inline: 2rem;
+    padding-block: 4rem;
+    border-radius: .7rem;
+}
+
+.dish-name{
+    font-family: 'Cormorant';
+    font-size: 2.5rem;
+    margin: 0;
+    letter-spacing: .1rem;
+
+}
+
+.dish-noodle-type{
+    font-family: 'inter';
+}
+
+.dish-description{
+    font-family: 'inter';
+    margin-block-start: 1rem;
+    
+}
+
+.dish-price{
+    font-family: 'inter';
+    font-weight: 600;
+    margin-block-start: 1rem;
+}
+
+
+/* PAGE THREE */
+
+#contact-container{
+    display: flex;
+    justify-content: center;
+    margin-block-start: 6rem;
+}
+
+#contact-us-container{
+    width: 40vw;
+    border-radius: .7rem;
+    padding-inline: 5rem;
+    -webkit-box-shadow: 28px 35px 44px -23px rgba(0,0,0,0.75);
+    -moz-box-shadow: 28px 35px 44px -23px rgba(0,0,0,0.75);
+    box-shadow: 28px 35px 44px -23px rgba(0,0,0,0.75);
+}
+
+#contact-us{
+    font-family: 'Inter';
+    line-height: 1.3rem;
+    letter-spacing: .05rem;
+}
+
+#contact-us-title{
+    font-family: 'Cormorant';
+    font-size: 2rem;
+}

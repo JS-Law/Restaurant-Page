@@ -47,56 +47,56 @@ class PageTwo {
          */     
         const menuItemOne = new MenuItem(
             'Pad Thai', 
-            800, 
+            '800cal', 
             'Rice Noodle',
             "A popular Thai dish made with thin rice noodles, egg, scallions, bean sprouts, peanuts, and shrimp.",
             "$14.99",
         )
         const menuItemTwo = new MenuItem(
             'Japchae', 
-            680, 
+            '680cal', 
             'Rice Noodle',
             "A popular Korean dish made with glass noodles from sweet potatoes that have a bouncy texture that pairs well with crunchy vegetables",
             "$15.99",
         )
         const menuItemThree = new MenuItem(
             'Laksa', 
-            550, 
+            '550cal', 
             'Rice Noodle',
             "A popular Southeast Asian dish made from rice flour noodles that are larger in diameter than rice vermicelli and look like white spaghetti",
             "$13.99",
         )
         const menuItemFour = new MenuItem(
             'Singapore-style Noodles', 
-            490, 
+            '490cal', 
             'Rice Noodle',
             "A nourishing curry-based rice noodle dish with vegetables, scallions, tofu, and cilantro",
             "$16.99",
         )
         const menuItemFive = new MenuItem(
             'Chow Mein', 
-            680, 
+            '680cal', 
             'Rice Noodle',
             "A versatile Chinese dish that can be made with stir-fried egg noodles, meat, and vegetables, or served vegetarian",
             "$12.99",
         )
         const menuItemSix = new MenuItem(
             'Lo Mein', 
-            500, 
+            '500cal', 
             'Rice Noodle',
             "A well-known Chinese dish made from wheat flour and sea salt, typically stir-fried with vegetables and meat",
             "$16.99",
         )
         const menuItemSeven = new MenuItem(
             'Lo Mein', 
-            800, 
+            '800cal', 
             'Rice Noodle',
             "A popular Japanese dish made from long, thin wheat-based noodles that are often dried into blocks for instant ramen",
             "$14.99",
         )
         const menuItemEight = new MenuItem(
             'Wonton Noodles', 
-            800, 
+            '800cal', 
             'Rice Noodle',
             "A Cantonese dish that includes wonton dumplings and is also popular in Hong Kong and some Southeast Asian countries ",
             "$14.99",

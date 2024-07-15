@@ -1,11 +1,13 @@
 import { PageOne } from "./page-one/page-one";
 import { PageTwo } from "./page-two/page-two";
+import { PageThree } from "./page-three/page-three";
 import { LoadHeader } from "./header-loader/header-loader";
 import './style.css';
 
 // Initialize PageOne class
 const generatePageOne = new PageOne();
 const generatePageTwo = new PageTwo();
+const generatePageThree = new PageThree();
 
 function callPage(page) {
     page.onPageLoad();
@@ -50,10 +52,13 @@ document.addEventListener('DOMContentLoaded', () => {
             pageUnload(generatePageOne)
             if (containerExists('temp-div')) {
                 clearContainer('content')
-                // console.log('The container exists.');
+            } else if(containerExists('menu-container')) {
+                clearContainer('content')
+                callPage(generatePageOne);
+
             } else {
                 callPage(generatePageOne);
-                // console.log('The container does not exist.');
+                
             }
         });
     }
@@ -62,7 +67,9 @@ document.addEventListener('DOMContentLoaded', () => {
             pageUnload(generatePageTwo)
             if (containerExists('menu-container')) {
                 clearContainer('content')
-                // console.log('The container exists.');
+            } else if(containerExists('temp-div')) {
+                clearContainer('content')
+                callPage(generatePageTwo);
             } else {
                 callPage(generatePageTwo);
             }
@@ -70,12 +77,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (contactBtn) {
         contactBtn.addEventListener('click', () => {
-            // pageUnload(generatePageThree)
+            pageUnload(generatePageThree)
             if (containerExists('contact-container')) {
                 clearContainer('content')
-                // console.log('The container exists.');
+            } else if(containerExists('contact-container')) {
+                clearContainer('content')
+                callPage(generatePageThree);
             } else {
-                // callPage(generatePageThree);
+                callPage(generatePageThree);
             }
             alert("Loading Contact Page");
         });
